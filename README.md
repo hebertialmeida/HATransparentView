@@ -1,0 +1,4 @@
+HATransparentView
+=================
+
+UIView subclass.
