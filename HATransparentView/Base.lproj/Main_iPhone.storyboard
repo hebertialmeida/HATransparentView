@@ -30,7 +30,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Rdio" id="KCa-Iv-kvg"/>
+                    <navigationItem key="navigationItem" title="Rdio" id="KCa-Iv-kvg">
+                        <barButtonItem key="rightBarButtonItem" title="Demo" id="guA-IS-VEZ">
+                            <connections>
+                                <action selector="didPressedDemo:" destination="vXZ-lx-hvc" id="zSt-vi-Aj7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="demoButton" destination="llg-hL-ibq" id="iSg-fI-RvC"/>
                     </connections>

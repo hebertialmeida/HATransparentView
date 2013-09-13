@@ -11,6 +11,6 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *demoButton;
-- (IBAction)didPressedDemo:(UIButton *)sender;
+- (IBAction)didPressedDemo:(id)sender;
 
 @end
