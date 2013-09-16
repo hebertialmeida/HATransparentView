@@ -31,7 +31,7 @@
 
 #pragma Show Transparent Modal View
 #
-- (void)show
+- (void)open
 {
     // Get main window reference
     UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;

@@ -10,6 +10,7 @@
 
 @interface HATransparentView : UIView
 
-- (void)show;
+- (void)open;
+- (void)close;
 
 @end
