@@ -3,9 +3,9 @@ HATransparentView
 
 Custom `UIView` subclass based on Rdio stations menu.
 
-![Demo HATransparentView](https://github.com/hebertialmeida/HATransparentView/tree/master/HATransparentView/Images.xcassets/1.png)
-![Demo2 HATransparentView](https://github.com/hebertialmeida/HATransparentView/tree/master/HATransparentView/Images.xcassets/2.png)
-![Demo3 HATransparentView](https://github.com/hebertialmeida/HATransparentView/tree/master/HATransparentView/Images.xcassets/3.png)
+![Demo HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/1.png)
+![Demo2 HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/2.png)
+![Demo3 HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/3.png)
 
 Usage
 -----
@@ -30,7 +30,7 @@ _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.
 
  1. Close:
 ```objc
-[_transparentView cloe];
+[_transparentView close];
 ```
 
 
