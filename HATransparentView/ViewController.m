@@ -45,13 +45,13 @@
 
 - (IBAction)didPressedDemo2:(id)sender
 {
-    HATransparentView *transparentTextView = [[HATransparentView alloc] init];
-    transparentTextView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.8];
-    [transparentTextView open];
+    _transparentView = [[HATransparentView alloc] init];
+    _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.8];
+    [_transparentView open];
     
     
     // Add a textView
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 64, transparentTextView.frame.size.width - 40, transparentTextView.frame.size.height - 64)];
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 64, _transparentView.frame.size.width - 40, _transparentView.frame.size.height - 64)];
     textView.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat fermentum diam, et facilisis nisl consectetur eu. Praesent quis blandit felis. Aliquam non vehicula dolor, scelerisque elementum orci. Mauris auctor convallis mauris, sit amet vulputate enim commodo sit amet. Nulla eget diam mollis, lobortis enim eu, egestas ipsum. Nulla et orci nulla. Nunc malesuada turpis vel nisi semper, in sodales ligula venenatis. Fusce quis enim sagittis, ullamcorper quam sed, scelerisque turpis. Pellentesque metus odio, ornare et porttitor a, feugiat nec urna. \n\nSuspendisse luctus, arcu quis placerat volutpat, ligula felis pellentesque lacus, in mattis nunc nibh sed ipsum. Aliquam aliquam elit placerat, porttitor ipsum ut, accumsan massa. Aliquam ut mi vitae elit vulputate consectetur. Ut ac vestibulum massa. Quisque ullamcorper blandit lobortis. In aliquet arcu id odio tempus mollis. Suspendisse quis rhoncus sem, non vulputate urna. Duis porta dui sed auctor porttitor. \n\nEtiam eget orci ultrices, aliquet ligula sed, aliquet felis. Cras nulla purus, volutpat nec leo aliquet, imperdiet lacinia sem. Curabitur lobortis fringilla lacus, elementum pharetra elit dapibus in. Praesent eget eros ut tortor dictum tincidunt. Donec feugiat tellus lectus, id egestas turpis semper vitae. Donec scelerisque magna quis pulvinar congue. Donec eu nisi nulla. Maecenas ornare volutpat orci, ut elementum libero euismod ut. Maecenas condimentum tellus at cursus lobortis. Fusce sapien lorem, hendrerit dapibus sapien eget, tempor laoreet purus. Vivamus quis blandit lacus. \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat fermentum diam, et facilisis nisl consectetur eu. Praesent quis blandit felis. Aliquam non vehicula dolor, scelerisque elementum orci. Mauris auctor convallis mauris, sit amet vulputate enim commodo sit amet. Nulla eget diam mollis, lobortis enim eu, egestas ipsum. Nulla et orci nulla. Nunc malesuada turpis vel nisi semper, in sodales ligula venenatis. Fusce quis enim sagittis, ullamcorper quam sed, scelerisque turpis. Pellentesque metus odio, ornare et porttitor a, feugiat nec urna. \n\nSuspendisse luctus, arcu quis placerat volutpat, ligula felis pellentesque lacus, in mattis nunc nibh sed ipsum. Aliquam aliquam elit placerat, porttitor ipsum ut, accumsan massa. Aliquam ut mi vitae elit vulputate consectetur. Ut ac vestibulum massa. Quisque ullamcorper blandit lobortis. In aliquet arcu id odio tempus mollis. Suspendisse quis rhoncus sem, non vulputate urna. Duis porta dui sed auctor porttitor. \n\nEtiam eget orci ultrices, aliquet ligula sed, aliquet felis. Cras nulla purus, volutpat nec leo aliquet, imperdiet lacinia sem. Curabitur lobortis fringilla lacus, elementum pharetra elit dapibus in. Praesent eget eros ut tortor dictum tincidunt. Donec feugiat tellus lectus, id egestas turpis semper vitae. Donec scelerisque magna quis pulvinar congue. Donec eu nisi nulla. Maecenas ornare volutpat orci, ut elementum libero euismod ut. Maecenas condimentum tellus at cursus lobortis. Fusce sapien lorem, hendrerit dapibus sapien eget, tempor laoreet purus. Vivamus quis blandit lacus.";
     textView.backgroundColor = [UIColor clearColor];
     textView.textColor = [UIColor whiteColor];
@@ -59,7 +59,7 @@
     textView.font = [UIFont systemFontOfSize:15];
     
     
-    [transparentTextView addSubview:textView];
+    [_transparentView addSubview:textView];
 }
 
 
