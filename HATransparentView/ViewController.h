@@ -14,5 +14,6 @@
 @property (strong, nonatomic) UITableView *tableView;
 
 - (IBAction)didPressedDemo:(id)sender;
+- (IBAction)didPressedDemo2:(id)sender;
 
 @end

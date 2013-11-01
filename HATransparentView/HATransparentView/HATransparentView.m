@@ -19,15 +19,6 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 
 #pragma Show Transparent Modal View
 #
@@ -39,7 +30,6 @@
 
     self.frame = [[UIScreen mainScreen] bounds];
     self.opaque = NO;
-    self.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.9];
     
     
     // Close
