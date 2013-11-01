@@ -4,8 +4,6 @@ HATransparentView
 Custom `UIView` subclass based on Rdio stations menu.
 
 ![Demo HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/1.png)
-![Demo2 HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/2.png)
-![Demo3 HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentView/Images.xcassets/3.png)
 
 Usage
 -----
