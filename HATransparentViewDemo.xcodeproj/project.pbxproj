@@ -37,11 +37,8 @@
 		1A0044B317E338A700DDD558 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A0044B517E338A700DDD558 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A0044BC17E338A700DDD558 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1A0044C417E338A700DDD558 /* HATransparentViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HATransparentViewDemoTests-Info.plist"; sourceTree = "<group>"; };
-		1A0044C617E338A700DDD558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A0044C817E338A700DDD558 /* HATransparentViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HATransparentViewTests.m; sourceTree = "<group>"; };
-		1A0044D517E33C0D00DDD558 /* HATransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATransparentView.h; path = HATransparentView/HATransparentView.h; sourceTree = "<group>"; };
-		1A0044D617E33C0D00DDD558 /* HATransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATransparentView.m; path = HATransparentView/HATransparentView.m; sourceTree = "<group>"; };
+		1A0044D517E33C0D00DDD558 /* HATransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HATransparentView.h; sourceTree = "<group>"; };
+		1A0044D617E33C0D00DDD558 /* HATransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HATransparentView.m; sourceTree = "<group>"; };
 		1A603D141823E0920019FB64 /* btn-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close.png"; sourceTree = "<group>"; };
 		1A603D151823E0920019FB64 /* btn-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,8 +60,8 @@
 		1A00448E17E338A600DDD558 = {
 			isa = PBXGroup;
 			children = (
+				1A603D121823E0120019FB64 /* HATransparentView */,
 				1A0044A017E338A700DDD558 /* HATransparentViewDemo */,
-				1A0044C217E338A700DDD558 /* HATransparentViewTests */,
 				1A00449917E338A600DDD558 /* Frameworks */,
 				1A00449817E338A600DDD558 /* Products */,
 			);
@@ -96,13 +93,11 @@
 				1A0044AA17E338A700DDD558 /* AppDelegate.m */,
 				1A0044B217E338A700DDD558 /* ViewController.h */,
 				1A0044B317E338A700DDD558 /* ViewController.m */,
-				1A603D121823E0120019FB64 /* HATransparentView */,
 				1A0044AC17E338A700DDD558 /* Main_iPhone.storyboard */,
 				1A0044B517E338A700DDD558 /* Images.xcassets */,
 				1A0044A117E338A700DDD558 /* Supporting Files */,
 			);
-			name = HATransparentViewDemo;
-			path = HATransparentView;
+			path = HATransparentViewDemo;
 			sourceTree = "<group>";
 		};
 		1A0044A117E338A700DDD558 /* Supporting Files */ = {
@@ -116,24 +111,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A0044C217E338A700DDD558 /* HATransparentViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				1A0044C817E338A700DDD558 /* HATransparentViewTests.m */,
-				1A0044C317E338A700DDD558 /* Supporting Files */,
-			);
-			path = HATransparentViewTests;
-			sourceTree = "<group>";
-		};
-		1A0044C317E338A700DDD558 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A0044C417E338A700DDD558 /* HATransparentViewDemoTests-Info.plist */,
-				1A0044C517E338A700DDD558 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		1A603D121823E0120019FB64 /* HATransparentView */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +118,7 @@
 				1A0044D617E33C0D00DDD558 /* HATransparentView.m */,
 				1A603D131823E0920019FB64 /* images */,
 			);
-			name = HATransparentView;
+			path = HATransparentView;
 			sourceTree = "<group>";
 		};
 		1A603D131823E0920019FB64 /* images */ = {
@@ -150,8 +127,7 @@
 				1A603D141823E0920019FB64 /* btn-close.png */,
 				1A603D151823E0920019FB64 /* btn-close@2x.png */,
 			);
-			name = images;
-			path = HATransparentView/images;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,14 +223,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		1A0044C517E338A700DDD558 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A0044C617E338A700DDD558 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -334,8 +302,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HATransparentView/HATransparentViewDemo-Prefix.pch";
-				INFOPLIST_FILE = "HATransparentView/HATransparentViewDemo-Info.plist";
+				GCC_PREFIX_HEADER = "HATransparentViewDemo/HATransparentViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "HATransparentViewDemo/HATransparentViewDemo-Info.plist";
 				PRODUCT_NAME = HATransparentViewDemo;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -348,8 +316,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HATransparentView/HATransparentViewDemo-Prefix.pch";
-				INFOPLIST_FILE = "HATransparentView/HATransparentViewDemo-Info.plist";
+				GCC_PREFIX_HEADER = "HATransparentViewDemo/HATransparentViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "HATransparentViewDemo/HATransparentViewDemo-Info.plist";
 				PRODUCT_NAME = HATransparentViewDemo;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
