@@ -99,6 +99,8 @@
     if (_selected == indexPath.row) {
         UIImageView *check = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check"]];
         cell.accessoryView = check;
+    } else {
+        cell.accessoryView = nil;
     }
     
     return cell;
