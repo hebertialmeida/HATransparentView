@@ -90,18 +90,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
+    UIImageView *check = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check"]];
+    
     cell.textLabel.text = _menu[indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.0 green:143/255.0 blue:213/255.0 alpha:1.0];
-    
-    if (_selected == indexPath.row) {
-        UIImageView *check = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"check"]];
-        cell.accessoryView = check;
-    } else {
-        cell.accessoryView = nil;
-    }
+    cell.accessoryView = (_selected == indexPath.row) ? check : nil;
     
     return cell;
 }
