@@ -10,9 +10,6 @@
 
 @interface HATransparentView : UIView
 
-@property (strong, nonatomic) UIColor *color;
-@property (nonatomic) CGFloat *alpha;
-
 - (void)open;
 - (void)close;
 
