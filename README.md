@@ -19,16 +19,22 @@ Usage
 @property (strong, nonatomic) HATransparentView *transparentView;
 ```
 
- 1. Open:
+ 1. Default open:
 ```objc
 _transparentView = [[HATransparentView alloc] init];
-_transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.8];
 [_transparentView open];
 ```
 
  1. Close:
 ```objc
 [_transparentView close];
+```
+
+ 1. Custom background:
+```objc
+_transparentView = [[HATransparentView alloc] init];
+_transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.9];
+[_transparentView open];
 ```
 
 
