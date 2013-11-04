@@ -8,36 +8,39 @@
 
 #import "HATransparentView.h"
 
+
+#define kDefaultBackground [UIColor colorWithWhite:0.0 alpha:0.9];
+
 @implementation HATransparentView
+
+#pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        self.frame = [[UIScreen mainScreen] bounds];
+        self.opaque = NO;
+        self.backgroundColor = kDefaultBackground;
+        
+        // Close button
+        UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
+        close.frame = CGRectMake(self.frame.size.width - 60, 26, 60, 30);
+        [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+        [close setImage:[UIImage imageNamed:@"btn-close"] forState:UIControlStateNormal];
+        [self addSubview:close];
     }
     return self;
 }
 
+#pragma mark - Open Transparent View
 
-#pragma Show Transparent Modal View
-#
 - (void)open
 {
     // Get main window reference
-    UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
-    if (!mainWindow) mainWindow = [[UIApplication sharedApplication].windows objectAtIndex:0];
-
-    self.frame = [[UIScreen mainScreen] bounds];
-    self.opaque = NO;
-    
-    
-    // Close
-    UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
-    close.frame = CGRectMake(mainWindow.frame.size.width - 60, 26, 60, 30);
-    [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
-    [close setImage:[UIImage imageNamed:@"btn-close"] forState:UIControlStateNormal];
-    [self addSubview:close];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    if (!window)
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
     
     // Animation
     CATransition *viewIn = [CATransition animation];
@@ -46,9 +49,12 @@
     [viewIn setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     [[self layer] addAnimation:viewIn forKey:kCATransitionReveal];
     
-    [mainWindow addSubview:self];
+    [[[window subviews] objectAtIndex:0] addSubview:self];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
+
+
+#pragma mark - Close Transparent View
 
 - (void)close
 {

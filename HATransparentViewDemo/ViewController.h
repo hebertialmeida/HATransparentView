@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *demoButton;
 @property (strong, nonatomic) UITableView *tableView;
 
 - (IBAction)didPressedDemo:(id)sender;

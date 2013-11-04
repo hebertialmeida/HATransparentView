@@ -34,7 +34,7 @@ _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.
 
 Requirements
 ----------
-* iOS 5.0 or higher
+* iOS 6.0 or higher
 * ARC
 
 ## License

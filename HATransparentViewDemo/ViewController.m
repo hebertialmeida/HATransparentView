@@ -26,10 +26,15 @@
     _menu = @[@"Your Stations", @"People", @"Alternative", @"Blues", @"Christian/Gospel", @"Classical", @"Country", @"Dance", @"Eletronic", @"Hip Hop", @"Indie", @"Jazz", @"Latin", @"Pop", @"R&B", @"Reggae", @"Rock", @"Songwriters/Folk", @"World", @"More"];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (IBAction)didPressedDemo:(UIButton *)sender
 {
     _transparentView = [[HATransparentView alloc] init];
-    _transparentView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.9];
     [_transparentView open];
 
     // Add a tableView
@@ -46,7 +51,7 @@
 - (IBAction)didPressedDemo2:(id)sender
 {
     _transparentView = [[HATransparentView alloc] init];
-    _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.8];
+    _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.9];
     [_transparentView open];
     
     
@@ -58,13 +63,12 @@
     textView.editable = NO;
     textView.font = [UIFont systemFontOfSize:15];
     
-    
     [_transparentView addSubview:textView];
 }
 
 
 #pragma mark - TableView Datasource
-#
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -104,14 +108,13 @@
 
 
 #pragma mark - TableView Delegate
-#
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [_transparentView close];
-    
     _selected = indexPath.row;
     
-    NSLog(@"Selected: %i", _selected);
+    // Remove
+    [_transparentView close];
 }
 
 @end
