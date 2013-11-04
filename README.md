@@ -34,12 +34,12 @@ _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.
 
 Requirements
 ----------
-* iOS 7.0 or higher
+* iOS 5.0 or higher
 * ARC
 
 ## License
 HATransparentView is released under the MIT license. See
-[LICENSE](https://github.com/chroman/CRGradientNavigationBar/blob/master/LICENSE).
+[LICENSE](https://github.com/hebertialmeida/HATransparentView/blob/master/LICENSE).
 
 Contact me
 ----------

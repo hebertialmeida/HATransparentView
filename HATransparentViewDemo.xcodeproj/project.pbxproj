@@ -16,25 +16,10 @@
 		1A0044AE17E338A700DDD558 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0044AC17E338A700DDD558 /* Main_iPhone.storyboard */; };
 		1A0044B417E338A700DDD558 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044B317E338A700DDD558 /* ViewController.m */; };
 		1A0044B617E338A700DDD558 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0044B517E338A700DDD558 /* Images.xcassets */; };
-		1A0044BD17E338A700DDD558 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0044BC17E338A700DDD558 /* XCTest.framework */; };
-		1A0044BE17E338A700DDD558 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00449A17E338A600DDD558 /* Foundation.framework */; };
-		1A0044BF17E338A700DDD558 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00449E17E338A600DDD558 /* UIKit.framework */; };
-		1A0044C717E338A700DDD558 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A0044C517E338A700DDD558 /* InfoPlist.strings */; };
-		1A0044C917E338A700DDD558 /* HATransparentViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044C817E338A700DDD558 /* HATransparentViewTests.m */; };
 		1A0044D717E33C0D00DDD558 /* HATransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044D617E33C0D00DDD558 /* HATransparentView.m */; };
 		1A603D161823E0920019FB64 /* btn-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D141823E0920019FB64 /* btn-close.png */; };
 		1A603D171823E0920019FB64 /* btn-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D151823E0920019FB64 /* btn-close@2x.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1A0044C017E338A700DDD558 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A00448F17E338A600DDD558 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A00449617E338A600DDD558;
-			remoteInfo = HATransparentView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1A00449717E338A600DDD558 /* HATransparentViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HATransparentViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +36,6 @@
 		1A0044B217E338A700DDD558 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A0044B317E338A700DDD558 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A0044B517E338A700DDD558 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1A0044BB17E338A700DDD558 /* HATransparentViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HATransparentViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0044BC17E338A700DDD558 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1A0044C417E338A700DDD558 /* HATransparentViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HATransparentViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		1A0044C617E338A700DDD558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -73,16 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A0044B817E338A700DDD558 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A0044BD17E338A700DDD558 /* XCTest.framework in Frameworks */,
-				1A0044BF17E338A700DDD558 /* UIKit.framework in Frameworks */,
-				1A0044BE17E338A700DDD558 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				1A00449717E338A600DDD558 /* HATransparentViewDemo.app */,
-				1A0044BB17E338A700DDD558 /* HATransparentViewDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,24 +174,6 @@
 			productReference = 1A00449717E338A600DDD558 /* HATransparentViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1A0044BA17E338A700DDD558 /* HATransparentViewDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A0044CF17E338A700DDD558 /* Build configuration list for PBXNativeTarget "HATransparentViewDemoTests" */;
-			buildPhases = (
-				1A0044B717E338A700DDD558 /* Sources */,
-				1A0044B817E338A700DDD558 /* Frameworks */,
-				1A0044B917E338A700DDD558 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1A0044C117E338A700DDD558 /* PBXTargetDependency */,
-			);
-			name = HATransparentViewDemoTests;
-			productName = HATransparentViewTests;
-			productReference = 1A0044BB17E338A700DDD558 /* HATransparentViewDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -227,11 +182,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Heberti Almeida";
-				TargetAttributes = {
-					1A0044BA17E338A700DDD558 = {
-						TestTargetID = 1A00449617E338A600DDD558;
-					};
-				};
 			};
 			buildConfigurationList = 1A00449217E338A600DDD558 /* Build configuration list for PBXProject "HATransparentViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -247,7 +197,6 @@
 			projectRoot = "";
 			targets = (
 				1A00449617E338A600DDD558 /* HATransparentViewDemo */,
-				1A0044BA17E338A700DDD558 /* HATransparentViewDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,14 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A0044B917E338A700DDD558 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A0044C717E338A700DDD558 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,23 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A0044B717E338A700DDD558 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A0044C917E338A700DDD558 /* HATransparentViewTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1A0044C117E338A700DDD558 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1A00449617E338A600DDD558 /* HATransparentViewDemo */;
-			targetProxy = 1A0044C017E338A700DDD558 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1A0044A317E338A700DDD558 /* InfoPlist.strings */ = {
@@ -431,46 +356,6 @@
 			};
 			name = Release;
 		};
-		1A0044D017E338A700DDD558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HATransparentView.app/HATransparentView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HATransparentView/HATransparentView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HATransparentViewTests/HATransparentViewDemoTests-Info.plist";
-				PRODUCT_NAME = HATransparentViewDemoTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1A0044D117E338A700DDD558 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HATransparentView.app/HATransparentView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HATransparentView/HATransparentView-Prefix.pch";
-				INFOPLIST_FILE = "HATransparentViewTests/HATransparentViewDemoTests-Info.plist";
-				PRODUCT_NAME = HATransparentViewDemoTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,15 +373,6 @@
 			buildConfigurations = (
 				1A0044CD17E338A700DDD558 /* Debug */,
 				1A0044CE17E338A700DDD558 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1A0044CF17E338A700DDD558 /* Build configuration list for PBXNativeTarget "HATransparentViewDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A0044D017E338A700DDD558 /* Debug */,
-				1A0044D117E338A700DDD558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
