@@ -5,9 +5,20 @@ Custom `UIView` subclass based on Rdio stations menu.
 
 ![Demo HATransparentView](https://raw.github.com/hebertialmeida/HATransparentView/master/HATransparentViewDemo/Images.xcassets/1.png)
 
-Usage
+Install
 -----
 
+### Installation with CocoaPods
+[CocoaPods](http://cocoapods.org) is the best way to manage library dependencies in Objective-C projects.
+
+#### Podfile
+```ruby
+platform :ios
+pod 'HATransparentView', '~> 0.1'
+```
+
+Usage
+-----
 
  1. Import the header file wherever you want to use the HATransparentView:
 ```objc
@@ -59,4 +70,3 @@ Twitter: [http://twitter.com/hebertialmeida][2]
 
   [1]: mailto:hebertialmeida@gmail.com
   [2]: http://twitter.com/chroman
-
