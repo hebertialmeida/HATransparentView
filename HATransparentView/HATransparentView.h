@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, HAStyle) {
+    HAStyleLight = 0,
+    HAStyleBlack,
+};
+
 @interface HATransparentView : UIView
+
+@property (nonatomic, assign) HAStyle style;
 
 - (void)open;
 - (void)close;
