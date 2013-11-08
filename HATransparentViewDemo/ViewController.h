@@ -14,5 +14,6 @@
 
 - (IBAction)didPressedDemo:(id)sender;
 - (IBAction)didPressedDemo2:(id)sender;
+- (IBAction)didPressedDemo3:(id)sender;
 
 @end

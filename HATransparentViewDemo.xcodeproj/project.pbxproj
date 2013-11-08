@@ -19,6 +19,8 @@
 		1A0044D717E33C0D00DDD558 /* HATransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044D617E33C0D00DDD558 /* HATransparentView.m */; };
 		1A603D161823E0920019FB64 /* btn-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D141823E0920019FB64 /* btn-close.png */; };
 		1A603D171823E0920019FB64 /* btn-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D151823E0920019FB64 /* btn-close@2x.png */; };
+		1AD75F94182CF792002D1C10 /* btn-close-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD75F92182CF792002D1C10 /* btn-close-black.png */; };
+		1AD75F95182CF792002D1C10 /* btn-close-black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD75F93182CF792002D1C10 /* btn-close-black@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		1A0044D617E33C0D00DDD558 /* HATransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HATransparentView.m; sourceTree = "<group>"; };
 		1A603D141823E0920019FB64 /* btn-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close.png"; sourceTree = "<group>"; };
 		1A603D151823E0920019FB64 /* btn-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close@2x.png"; sourceTree = "<group>"; };
+		1AD75F92182CF792002D1C10 /* btn-close-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-black.png"; sourceTree = "<group>"; };
+		1AD75F93182CF792002D1C10 /* btn-close-black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-black@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 			children = (
 				1A603D141823E0920019FB64 /* btn-close.png */,
 				1A603D151823E0920019FB64 /* btn-close@2x.png */,
+				1AD75F92182CF792002D1C10 /* btn-close-black.png */,
+				1AD75F93182CF792002D1C10 /* btn-close-black@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -182,7 +188,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD75F95182CF792002D1C10 /* btn-close-black@2x.png in Resources */,
 				1A0044B617E338A700DDD558 /* Images.xcassets in Resources */,
+				1AD75F94182CF792002D1C10 /* btn-close-black.png in Resources */,
 				1A0044AE17E338A700DDD558 /* Main_iPhone.storyboard in Resources */,
 				1A0044A517E338A700DDD558 /* InfoPlist.strings in Resources */,
 				1A603D171823E0920019FB64 /* btn-close@2x.png in Resources */,
