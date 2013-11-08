@@ -42,10 +42,20 @@ _transparentView = [[HATransparentView alloc] init];
 [_transparentView close];
 ```
 
+Custom
+-----
+
  1. Custom background:
 ```objc
 _transparentView = [[HATransparentView alloc] init];
 _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.9];
+[_transparentView open];
+```
+
+ 1. Custom status bar (iOS 7) and close button with `HAStyleBlack`, default is `HAStyleLight`:
+```objc
+_transparentView = [[HATransparentView alloc] init];
+_transparentView.style = HAStyleBlack;
 [_transparentView open];
 ```
 
