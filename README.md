@@ -15,11 +15,12 @@ Install
 #### Podfile
 ```ruby
 platform :ios
-pod 'HATransparentView', '~> 0.1'
+pod 'HATransparentView', '~> 0.2'
 ```
 
 Usage
 -----
+ 1. Add Key value to info.plist: `View controller-based status bar appearance`, `NO`
 
  1. Import the header file wherever you want to use the HATransparentView:
 ```objc
