@@ -76,9 +76,10 @@ Contact me
 **Heberti Almeida**  
 
 
-Contact: [hebertialmeida@gmail.com][1]
-
-Twitter: [http://twitter.com/hebertialmeida][2] 
+* Contact: [hebertialmeida@gmail.com][1]
+* Twitter: [http://twitter.com/hebertialmeida][2] 
+* LinkedIn: [http://www.linkedin.com/in/hebertialmeida][3] 
 
   [1]: mailto:hebertialmeida@gmail.com
   [2]: http://twitter.com/hebertialmeida
+  [3]: http://www.linkedin.com/in/hebertialmeida 
