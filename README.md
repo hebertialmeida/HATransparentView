@@ -83,3 +83,7 @@ Contact me
   [1]: mailto:hebertialmeida@gmail.com
   [2]: http://twitter.com/hebertialmeida
   [3]: http://www.linkedin.com/in/hebertialmeida 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hebertialmeida/hatransparentview/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
