@@ -13,9 +13,17 @@ typedef NS_ENUM(NSInteger, HAStyle) {
     HAStyleBlack,
 };
 
+
+@protocol HATransparentViewDelegate <NSObject>
+@optional
+- (void)HATransparentViewDidClosed;
+
+@end
+
 @interface HATransparentView : UIView
 
 @property (nonatomic, assign) HAStyle style;
+@property (nonatomic, assign) id<HATransparentViewDelegate> delegate;
 
 - (void)open;
 - (void)close;

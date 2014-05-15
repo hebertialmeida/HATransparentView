@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "HATransparentView.h"
 
-@interface ViewController ()
+@interface ViewController () <HATransparentViewDelegate>
 
 @property (strong, nonatomic) HATransparentView *transparentView;
 @property (strong, nonatomic) NSArray *menu;
@@ -38,6 +38,7 @@
 - (IBAction)didPressedDemo:(UIButton *)sender
 {
     _transparentView = [[HATransparentView alloc] init];
+    _transparentView.delegate = self;
     [_transparentView open];
 
     // Add a tableView
@@ -53,6 +54,7 @@
 - (IBAction)didPressedDemo2:(id)sender
 {
     _transparentView = [[HATransparentView alloc] init];
+    _transparentView.delegate = self;
     _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.9];
     [_transparentView open];
     
@@ -70,6 +72,7 @@
 - (IBAction)didPressedDemo3:(id)sender
 {
     _transparentView = [[HATransparentView alloc] init];
+    _transparentView.delegate = self;
     _transparentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.9];
     _transparentView.style = HAStyleBlack;
     [_transparentView open];
@@ -133,6 +136,13 @@
     
     // Remove
     [_transparentView close];
+}
+
+#pragma mark - HATransparentViewDelegate
+
+- (void)HATransparentViewDidClosed
+{
+    NSLog(@"Did close");
 }
 
 @end
