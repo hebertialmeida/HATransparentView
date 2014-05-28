@@ -28,7 +28,7 @@
         self.frame = [[UIScreen mainScreen] bounds];
         self.opaque = NO;
         self.backgroundColor = kDefaultBackground;
-        _hideCloseButton = NO;
+        self.hideCloseButton = NO;
     }
     return self;
 }
