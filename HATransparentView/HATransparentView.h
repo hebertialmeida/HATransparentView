@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, HAStyle) {
 
 @property (nonatomic, assign) HAStyle style;
 @property (nonatomic, assign) id<HATransparentViewDelegate> delegate;
+@property (nonatomic, assign) BOOL hideCloseButton;
 
 - (void)open;
 - (void)close;

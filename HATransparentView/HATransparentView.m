@@ -28,6 +28,7 @@
         self.frame = [[UIScreen mainScreen] bounds];
         self.opaque = NO;
         self.backgroundColor = kDefaultBackground;
+        self.hideCloseButton = NO;
     }
     return self;
 }
@@ -45,21 +46,23 @@
     self.statusBarStyle = [[UIApplication sharedApplication] statusBarStyle];
     
     // Close button
-    UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
-    close.frame = CGRectMake(self.frame.size.width - 60, 26, 60, 30);
-    [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:close];
-    
-    switch (self.style) {
-        case HAStyleLight: {
-            [close setImage:[UIImage imageNamed:@"btn-close"] forState:UIControlStateNormal];
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-            break;
-        }
-        case HAStyleBlack: {
-            [close setImage:[UIImage imageNamed:@"btn-close-black"] forState:UIControlStateNormal];
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-            break;
+    if (!self.hideCloseButton) {
+        UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
+        close.frame = CGRectMake(self.frame.size.width - 60, 26, 60, 30);
+        [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:close];
+        
+        switch (self.style) {
+            case HAStyleLight: {
+                [close setImage:[UIImage imageNamed:@"btn-close"] forState:UIControlStateNormal];
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+                break;
+            }
+            case HAStyleBlack: {
+                [close setImage:[UIImage imageNamed:@"btn-close-black"] forState:UIControlStateNormal];
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+                break;
+            }
         }
     }
     
