@@ -14,7 +14,6 @@ Install
 
 #### Podfile
 ```ruby
-platform :ios
 pod 'HATransparentView', '~> 0.3'
 ```
 
@@ -23,29 +22,31 @@ Usage
  * Add Key value to info.plist: `View controller-based status bar appearance`, `NO`
 
  * Import the header file wherever you want to use the HATransparentView:
-```objc
+```objective-c
 #import "HATransparentView.h"
+
+@interface ViewController () <HATransparentViewDelegate>
 ```
 
  * Define:
-```objc
+```objective-c
 @property (strong, nonatomic) HATransparentView *transparentView;
 ```
 
  * Default open:
-```objc
+```objective-c
 _transparentView = [[HATransparentView alloc] init];
 _transparentView.delegate = self;
 [_transparentView open];
 ```
 
  * Close:
-```objc
+```objective-c
 [_transparentView close];
 ```
 
  * Delegate:
-```objc
+```objective-c
 - (void)HATransparentViewDidClosed
 {
     NSLog(@"Did close");
@@ -56,14 +57,14 @@ Custom
 -----
 
  * Custom background:
-```objc
+```objective-c
 _transparentView = [[HATransparentView alloc] init];
 _transparentView.backgroundColor = [UIColor colorWithRed:242/255.0 green:46/255.0 blue:50/255.0 alpha:0.9];
 [_transparentView open];
 ```
 
  * Custom status bar (iOS 7) and close button with `HAStyleBlack`, default is `HAStyleLight`:
-```objc
+```objective-c
 _transparentView = [[HATransparentView alloc] init];
 _transparentView.style = HAStyleBlack;
 [_transparentView open];
