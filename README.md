@@ -14,7 +14,7 @@ Install
 
 #### Podfile
 ```ruby
-pod 'HATransparentView', '~> 0.3'
+pod 'HATransparentView', '~> 0.4'
 ```
 
 Usage
@@ -37,6 +37,8 @@ Usage
 ```objective-c
 _transparentView = [[HATransparentView alloc] init];
 _transparentView.delegate = self;
+_transparentView.tapBackgroundToClose = YES;
+_transparentView.hideCloseButton = YES;
 [_transparentView open];
 ```
 
