@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC2EA44199CF3E2006D07AC /* HATransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2EA43199CF3E2006D07AC /* HATransparentView.m */; };
 		1A00449B17E338A600DDD558 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00449A17E338A600DDD558 /* Foundation.framework */; };
 		1A00449D17E338A600DDD558 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00449C17E338A600DDD558 /* CoreGraphics.framework */; };
 		1A00449F17E338A600DDD558 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A00449E17E338A600DDD558 /* UIKit.framework */; };
@@ -16,7 +17,6 @@
 		1A0044AE17E338A700DDD558 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0044AC17E338A700DDD558 /* Main_iPhone.storyboard */; };
 		1A0044B417E338A700DDD558 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044B317E338A700DDD558 /* ViewController.m */; };
 		1A0044B617E338A700DDD558 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0044B517E338A700DDD558 /* Images.xcassets */; };
-		1A0044D717E33C0D00DDD558 /* HATransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0044D617E33C0D00DDD558 /* HATransparentView.m */; };
 		1A603D161823E0920019FB64 /* btn-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D141823E0920019FB64 /* btn-close.png */; };
 		1A603D171823E0920019FB64 /* btn-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D151823E0920019FB64 /* btn-close@2x.png */; };
 		1AD75F94182CF792002D1C10 /* btn-close-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD75F92182CF792002D1C10 /* btn-close-black.png */; };
@@ -24,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC2EA42199CF3E2006D07AC /* HATransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HATransparentView.h; sourceTree = "<group>"; };
+		0AC2EA43199CF3E2006D07AC /* HATransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HATransparentView.m; sourceTree = "<group>"; };
 		1A00449717E338A600DDD558 /* HATransparentViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HATransparentViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A00449A17E338A600DDD558 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A00449C17E338A600DDD558 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -39,8 +41,6 @@
 		1A0044B317E338A700DDD558 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A0044B517E338A700DDD558 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A0044BC17E338A700DDD558 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1A0044D517E33C0D00DDD558 /* HATransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HATransparentView.h; sourceTree = "<group>"; };
-		1A0044D617E33C0D00DDD558 /* HATransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HATransparentView.m; sourceTree = "<group>"; };
 		1A603D141823E0920019FB64 /* btn-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close.png"; sourceTree = "<group>"; };
 		1A603D151823E0920019FB64 /* btn-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close@2x.png"; sourceTree = "<group>"; };
 		1AD75F92182CF792002D1C10 /* btn-close-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-black.png"; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		1A603D121823E0120019FB64 /* HATransparentView */ = {
 			isa = PBXGroup;
 			children = (
-				1A0044D517E33C0D00DDD558 /* HATransparentView.h */,
-				1A0044D617E33C0D00DDD558 /* HATransparentView.m */,
+				0AC2EA42199CF3E2006D07AC /* HATransparentView.h */,
+				0AC2EA43199CF3E2006D07AC /* HATransparentView.m */,
 				1A603D131823E0920019FB64 /* images */,
 			);
 			path = HATransparentView;
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0044D717E33C0D00DDD558 /* HATransparentView.m in Sources */,
+				0AC2EA44199CF3E2006D07AC /* HATransparentView.m in Sources */,
 				1A0044B417E338A700DDD558 /* ViewController.m in Sources */,
 				1A0044AB17E338A700DDD558 /* AppDelegate.m in Sources */,
 				1A0044A717E338A700DDD558 /* main.m in Sources */,
