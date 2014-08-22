@@ -214,7 +214,7 @@
 
 #pragma mark - HATransparentViewDelegate
 
-- (void)didTransparentViewClosed {
+- (void)HATransparentViewDidClosed {
   NSLog(@"Did close");
 }
 

@@ -11,10 +11,8 @@
 typedef NS_ENUM(NSInteger, HAStyle) { HAStyleLight = 0, HAStyleBlack, };
 
 @protocol HATransparentViewDelegate <NSObject>
-
 @optional
-- (void)didTransparentViewClosed;
-
+- (void)HATransparentViewDidClosed;
 @end
 
 @interface HATransparentView : UIView
@@ -22,8 +20,7 @@ typedef NS_ENUM(NSInteger, HAStyle) { HAStyleLight = 0, HAStyleBlack, };
 @property(nonatomic, assign) HAStyle style;
 @property(nonatomic, assign) id<HATransparentViewDelegate> delegate;
 @property(nonatomic, assign) BOOL hideCloseButton;
-@property(nonatomic, assign, setter=tapBackgroundToClose
-          :) BOOL tapBackgroundToClose;
+@property(nonatomic, assign, setter=tapBackgroundToClose:) BOOL tapBackgroundToClose;
 
 - (void)open;
 - (void)close;

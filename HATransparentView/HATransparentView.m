@@ -104,7 +104,7 @@
   [[UIApplication sharedApplication] setStatusBarStyle:self.statusBarStyle];
   [self removeFromSuperview];
 
-  [self.delegate didTransparentViewClosed];
+  [self.delegate HATransparentViewDidClosed];
 }
 
 #pragma mark - UITapGestureRecognizer
