@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, HAStyle) { HAStyleLight = 0, HAStyleBlack, };
 @property(nonatomic, assign) id<HATransparentViewDelegate> delegate;
 @property(nonatomic, assign) BOOL hideCloseButton;
 @property(nonatomic, assign, setter=tapBackgroundToClose:) BOOL tapBackgroundToClose;
+@property(nonatomic, assign, setter=useBlur:) BOOL useBlur;
+@property(nonatomic, assign, setter=blurEffectStyle:) UIBlurEffectStyle blurEffectStyle;
 
 - (void)open;
 - (void)close;

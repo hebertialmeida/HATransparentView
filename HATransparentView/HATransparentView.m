@@ -12,6 +12,8 @@
 
 @interface HATransparentView ()
 
+@property(nonatomic, retain) UIBlurEffect *blurEffect;
+@property(nonatomic, retain) UIView *blurredView;
 @property(nonatomic, assign) NSInteger statusBarStyle;
 
 @end
@@ -26,6 +28,8 @@
     self.frame = [[UIScreen mainScreen] bounds];
     self.opaque = NO;
     self.backgroundColor = kDefaultBackground;
+    self.useBlur = NO;
+    self.blurEffectStyle = UIBlurEffectStyleLight;
     self.hideCloseButton = NO;
     self.tapBackgroundToClose = NO;
   }
@@ -36,6 +40,35 @@
 - (void)tapBackgroundToClose:(BOOL)close {
   if (close) {
     [self addTapGestureRecognizer];
+  }
+}
+
+- (void)blurEffectStyle:(UIBlurEffectStyle)blurEffectStyle {
+  if (self.blurredView != nil && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+    self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+    if (self.blurredView.superview != nil) {
+      [self.blurredView removeFromSuperview];
+    }
+    self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
+    self.blurredView.frame = self.frame;
+    [self insertSubview:self.blurredView atIndex:0];
+  }
+}
+
+- (void)useBlur:(BOOL)useBlur {
+  if (useBlur && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+    if (self.blurredView == nil) {
+      self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+      self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
+      self.blurredView.frame = self.frame;
+      [self insertSubview:self.blurredView atIndex:0];
+    } else if (self.blurredView.superview == nil) {
+      [self insertSubview:self.blurredView atIndex:0];
+    }
+  } else {
+    if (self.blurredView != nil) {
+      [self.blurredView removeFromSuperview];
+    }
   }
 }
 

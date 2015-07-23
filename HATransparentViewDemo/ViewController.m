@@ -95,6 +95,9 @@
       @"elementum libero euismod ut. Maecenas condimentum tellus at cursus "
       @"lobortis. Fusce sapien lorem, hendrerit dapibus sapien eget, tempor "
       @"laoreet purus. Vivamus quis blandit lacus.";
+  
+  self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+  self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,6 +156,27 @@
   UITextView *textView = [[UITextView alloc]
       initWithFrame:CGRectMake(20, 64, _transparentView.frame.size.width - 40,
                                _transparentView.frame.size.height - 64)];
+  textView.text = _text;
+  textView.backgroundColor = [UIColor clearColor];
+  textView.textColor = [UIColor blackColor];
+  textView.editable = NO;
+  textView.font = [UIFont systemFontOfSize:15];
+  [_transparentView addSubview:textView];
+}
+
+- (IBAction)didPressedDemo4:(id)sender {
+  _transparentView = [[HATransparentView alloc] init];
+  _transparentView.delegate = self;
+  _transparentView.backgroundColor = [UIColor clearColor];
+  _transparentView.blurEffectStyle = UIButtonTypeInfoDark;
+  _transparentView.useBlur = YES;
+  _transparentView.style = HAStyleBlack;
+  [_transparentView open];
+  
+  // Add a textView
+  UITextView *textView = [[UITextView alloc]
+                          initWithFrame:CGRectMake(20, 64, _transparentView.frame.size.width - 40,
+                                                   _transparentView.frame.size.height - 64)];
   textView.text = _text;
   textView.backgroundColor = [UIColor clearColor];
   textView.textColor = [UIColor blackColor];
