@@ -96,8 +96,9 @@
       @"lobortis. Fusce sapien lorem, hendrerit dapibus sapien eget, tempor "
       @"laoreet purus. Vivamus quis blandit lacus.";
   
-  self.navigationController.navigationBar.barTintColor = [UIColor redColor];
-  self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -168,7 +169,7 @@
   _transparentView = [[HATransparentView alloc] init];
   _transparentView.delegate = self;
   _transparentView.backgroundColor = [UIColor clearColor];
-  _transparentView.blurEffectStyle = UIButtonTypeInfoDark;
+  _transparentView.blurEffectStyle = UIBlurEffectStyleLight;
   _transparentView.useBlur = YES;
   _transparentView.style = HAStyleBlack;
   [_transparentView open];

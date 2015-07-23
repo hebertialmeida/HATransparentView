@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, HAStyle) { HAStyleLight = 0, HAStyleBlack, };
+typedef NS_ENUM(NSInteger, HAStyle) {
+    HAStyleLight = 0,
+    HAStyleBlack
+};
 
 @protocol HATransparentViewDelegate <NSObject>
 @optional

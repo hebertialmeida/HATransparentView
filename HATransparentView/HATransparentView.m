@@ -23,134 +23,120 @@
 #pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame {
-  self = [super initWithFrame:frame];
-  if (self) {
-    self.frame = [[UIScreen mainScreen] bounds];
-    self.opaque = NO;
-    self.backgroundColor = kDefaultBackground;
-    self.useBlur = NO;
-    self.blurEffectStyle = UIBlurEffectStyleLight;
-    self.hideCloseButton = NO;
-    self.tapBackgroundToClose = NO;
-  }
-
-  return self;
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.frame = [[UIScreen mainScreen] bounds];
+        self.opaque = NO;
+        self.backgroundColor = kDefaultBackground;
+        self.useBlur = NO;
+        self.blurEffectStyle = UIBlurEffectStyleLight;
+        self.hideCloseButton = NO;
+        self.tapBackgroundToClose = NO;
+    }
+    return self;
 }
 
 - (void)tapBackgroundToClose:(BOOL)close {
-  if (close) {
-    [self addTapGestureRecognizer];
-  }
+    if (close) {
+        [self addTapGestureRecognizer];
+    }
 }
 
 - (void)blurEffectStyle:(UIBlurEffectStyle)blurEffectStyle {
-  if (self.blurredView != nil && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-    self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
-    if (self.blurredView.superview != nil) {
-      [self.blurredView removeFromSuperview];
+    if (self.blurredView != nil && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+        if (self.blurredView.superview != nil) [self.blurredView removeFromSuperview];
+        self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
+        self.blurredView.frame = self.frame;
+        [self insertSubview:self.blurredView atIndex:0];
     }
-    self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
-    self.blurredView.frame = self.frame;
-    [self insertSubview:self.blurredView atIndex:0];
-  }
 }
 
 - (void)useBlur:(BOOL)useBlur {
-  if (useBlur && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-    if (self.blurredView == nil) {
-      self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
-      self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
-      self.blurredView.frame = self.frame;
-      [self insertSubview:self.blurredView atIndex:0];
-    } else if (self.blurredView.superview == nil) {
-      [self insertSubview:self.blurredView atIndex:0];
+    if (useBlur && [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        if (self.blurredView == nil) {
+            self.blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+            self.blurredView = [[UIVisualEffectView alloc] initWithEffect:self.blurEffect];
+            self.blurredView.frame = self.frame;
+            [self insertSubview:self.blurredView atIndex:0];
+        } else if (self.blurredView.superview == nil) {
+            [self insertSubview:self.blurredView atIndex:0];
+        }
+    } else if (self.blurredView != nil) {
+        [self.blurredView removeFromSuperview];
     }
-  } else {
-    if (self.blurredView != nil) {
-      [self.blurredView removeFromSuperview];
-    }
-  }
 }
 
 #pragma mark - Open Transparent View
 
 - (void)open {
-  // Get main window reference
-  UIWindow *window = [UIApplication sharedApplication].keyWindow;
-  if (!window)
-    window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    // Get main window reference
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    if (!window) window = [[UIApplication sharedApplication].windows objectAtIndex:0];
 
-  // Get current statusBarStyle
-  self.statusBarStyle = [[UIApplication sharedApplication] statusBarStyle];
+    // Get current statusBarStyle
+    self.statusBarStyle = [[UIApplication sharedApplication] statusBarStyle];
 
-  // Close button
-  if (!self.hideCloseButton) {
-    UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
-    close.frame = CGRectMake(self.frame.size.width - 60, 26, 60, 30);
-    [close addTarget:self
-                  action:@selector(close)
-        forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:close];
+    // Close button
+    if (!self.hideCloseButton) {
+        UIButton *close = [UIButton buttonWithType:UIButtonTypeCustom];
+        close.frame = CGRectMake(self.frame.size.width - 60, 26, 60, 30);
+        [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:close];
 
-    switch (self.style) {
-    case HAStyleLight: {
-      [close setImage:[UIImage imageNamed:@"btn-close"]
-             forState:UIControlStateNormal];
-      [[UIApplication sharedApplication]
-          setStatusBarStyle:UIStatusBarStyleLightContent];
-      break;
+        switch (self.style) {
+            case HAStyleLight: {
+                [close setImage:[UIImage imageNamed:@"btn-close"]
+                forState:UIControlStateNormal];
+                [[UIApplication sharedApplication]
+                setStatusBarStyle:UIStatusBarStyleLightContent];
+                break;
+            }
+            case HAStyleBlack: {
+                [close setImage:[UIImage imageNamed:@"btn-close-black"]
+                forState:UIControlStateNormal];
+                [[UIApplication sharedApplication]
+                setStatusBarStyle:UIStatusBarStyleDefault];
+                break;
+            }
+        }
     }
-    case HAStyleBlack: {
-      [close setImage:[UIImage imageNamed:@"btn-close-black"]
-             forState:UIControlStateNormal];
-      [[UIApplication sharedApplication]
-          setStatusBarStyle:UIStatusBarStyleDefault];
-      break;
-    }
-    }
-  }
 
-  // Animation
-  CATransition *viewIn = [CATransition animation];
-  [viewIn setDuration:0.4];
-  [viewIn setType:kCATransitionReveal];
-  [viewIn
-      setTimingFunction:[CAMediaTimingFunction
-                            functionWithName:kCAMediaTimingFunctionEaseOut]];
-  [[self layer] addAnimation:viewIn forKey:kCATransitionReveal];
+    // Animation
+    CATransition *viewIn = [CATransition animation];
+    [viewIn setDuration:0.4];
+    [viewIn setType:kCATransitionReveal];
+    [viewIn setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    [[self layer] addAnimation:viewIn forKey:kCATransitionReveal];
 
-  [[[window subviews] objectAtIndex:0] addSubview:self];
+    [[[window subviews] objectAtIndex:0] addSubview:self];
 }
 
 #pragma mark - Close Transparent View
 
 - (void)close {
-  // Animation
-  CATransition *viewOut = [CATransition animation];
-  [viewOut setDuration:0.3];
-  [viewOut setType:kCATransitionFade];
-  [viewOut setTimingFunction:
-               [CAMediaTimingFunction
-                   functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-  [[self.superview layer] addAnimation:viewOut forKey:kCATransitionFade];
+    // Animation
+    CATransition *viewOut = [CATransition animation];
+    [viewOut setDuration:0.3];
+    [viewOut setType:kCATransitionFade];
+    [viewOut setTimingFunction: [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [[self.superview layer] addAnimation:viewOut forKey:kCATransitionFade];
 
-  [[UIApplication sharedApplication] setStatusBarStyle:self.statusBarStyle];
-  [self removeFromSuperview];
+    [[UIApplication sharedApplication] setStatusBarStyle:self.statusBarStyle];
+    [self removeFromSuperview];
 
-  [self.delegate HATransparentViewDidClosed];
+    [self.delegate HATransparentViewDidClosed];
 }
 
 #pragma mark - UITapGestureRecognizer
 
 - (void)addTapGestureRecognizer {
-  UITapGestureRecognizer *tapGesture =
-      [[UITapGestureRecognizer alloc] initWithTarget:self
-                                              action:@selector(close:)];
-  [self addGestureRecognizer:tapGesture];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
+    [self addGestureRecognizer:tapGesture];
 }
 
 - (void)close:(UITapGestureRecognizer *)sender {
-  [self close];
+    [self close];
 }
 
 @end
