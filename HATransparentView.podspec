@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HATransparentView"
-  s.version      = "0.4"
+  s.version      = "0.5"
   s.summary      = "UIView transparent subclass based on Rdio stations menu."
   s.homepage     = "https://github.com/hebertialmeida/HATransparentView"
   s.screenshots  = "https://raw.githubusercontent.com/hebertialmeida/HATransparentView/master/HATransparentViewDemo/Images.xcassets/1.png"
