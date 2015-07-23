@@ -14,7 +14,7 @@ Install
 
 #### Podfile
 ```ruby
-pod 'HATransparentView', '~> 0.4'
+pod 'HATransparentView'
 ```
 
 Usage
