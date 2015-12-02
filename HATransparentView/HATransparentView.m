@@ -84,22 +84,26 @@
         [close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:close];
 
-        switch (self.style) {
-            case HAStyleLight: {
-                [close setImage:[UIImage imageNamed:@"btn-close"]
-                forState:UIControlStateNormal];
-                [[UIApplication sharedApplication]
-                setStatusBarStyle:UIStatusBarStyleLightContent];
-                break;
-            }
-            case HAStyleBlack: {
-                [close setImage:[UIImage imageNamed:@"btn-close-black"]
-                forState:UIControlStateNormal];
-                [[UIApplication sharedApplication]
-                setStatusBarStyle:UIStatusBarStyleDefault];
-                break;
-            }
-        }
+		NSString *imageName = nil;
+		UIStatusBarStyle statusBarStyle = UIStatusBarStyleDefault;
+
+		switch (self.style) {
+			case HAStyleLight: {
+				imageName = @"btn-close";
+				statusBarStyle = UIStatusBarStyleLightContent;
+				break;
+			}
+			case HAStyleBlack: {
+				imageName = @"btn-close-black";
+				statusBarStyle = UIStatusBarStyleDefault;
+				break;
+			}
+		}
+
+		UIImage *image = [UIImage imageNamed:imageName inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+
+		[close setImage:image forState:UIControlStateNormal];
+		[[UIApplication sharedApplication] setStatusBarStyle:statusBarStyle];
     }
 
     // Animation
