@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HATransparentView"
-  s.version      = "0.5"
+  s.version      = "0.6"
   s.summary      = "UIView transparent subclass based on Rdio stations menu."
   s.homepage     = "https://github.com/hebertialmeida/HATransparentView"
   s.screenshots  = "https://raw.githubusercontent.com/hebertialmeida/HATransparentView/master/HATransparentViewDemo/Images.xcassets/1.png"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
   }
 
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '8.0'
   s.source_files = 'Classes', 'HATransparentView/*.{h,m}'
   s.resources = "HATransparentView/images/*.png"
   s.framework  = 'UIKit'
