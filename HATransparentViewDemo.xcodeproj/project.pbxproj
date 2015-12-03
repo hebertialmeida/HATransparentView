@@ -21,6 +21,7 @@
 		1A603D171823E0920019FB64 /* btn-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A603D151823E0920019FB64 /* btn-close@2x.png */; };
 		1AD75F94182CF792002D1C10 /* btn-close-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD75F92182CF792002D1C10 /* btn-close-black.png */; };
 		1AD75F95182CF792002D1C10 /* btn-close-black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD75F93182CF792002D1C10 /* btn-close-black@2x.png */; };
+		1AEB6B8B1C0FF145007F330A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEB6B891C0FF145007F330A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		1A603D151823E0920019FB64 /* btn-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close@2x.png"; sourceTree = "<group>"; };
 		1AD75F92182CF792002D1C10 /* btn-close-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-black.png"; sourceTree = "<group>"; };
 		1AD75F93182CF792002D1C10 /* btn-close-black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close-black@2x.png"; sourceTree = "<group>"; };
+		1AEB6B8A1C0FF145007F330A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				1A0044B217E338A700DDD558 /* ViewController.h */,
 				1A0044B317E338A700DDD558 /* ViewController.m */,
 				1A0044AC17E338A700DDD558 /* Main_iPhone.storyboard */,
+				1AEB6B891C0FF145007F330A /* LaunchScreen.storyboard */,
 				1A0044B517E338A700DDD558 /* Images.xcassets */,
 				1A0044A117E338A700DDD558 /* Supporting Files */,
 			);
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD75F95182CF792002D1C10 /* btn-close-black@2x.png in Resources */,
+				1AEB6B8B1C0FF145007F330A /* LaunchScreen.storyboard in Resources */,
 				1A0044B617E338A700DDD558 /* Images.xcassets in Resources */,
 				1AD75F94182CF792002D1C10 /* btn-close-black.png in Resources */,
 				1A0044AE17E338A700DDD558 /* Main_iPhone.storyboard in Resources */,
@@ -229,6 +233,14 @@
 				1A0044AD17E338A700DDD558 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1AEB6B891C0FF145007F330A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AEB6B8A1C0FF145007F330A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

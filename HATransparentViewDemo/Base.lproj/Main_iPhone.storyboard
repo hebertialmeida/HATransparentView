@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A226f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CJn-Uk-0M8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CJn-Uk-0M8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Transparent View-->
@@ -14,12 +14,15 @@
                         <viewControllerLayoutGuide type="bottom" id="WNq-GR-5i0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llg-hL-ibq">
-                                <rect key="frame" x="74" y="231" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llg-hL-ibq">
+                                <rect key="frame" x="214" y="228" width="173" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="k4F-LX-hNO"/>
+                                </constraints>
                                 <state key="normal" title="Rdio menu demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,8 +30,8 @@
                                     <action selector="didPressedDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="J2T-Cg-D1I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfb-Oq-cvj">
-                                <rect key="frame" x="74" y="269" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfb-Oq-cvj">
+                                <rect key="frame" x="214" y="266" width="173" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Tap to dismiss demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,8 +40,8 @@
                                     <action selector="didPressedDemo2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ewW-kV-oQJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-lH-rbi">
-                                <rect key="frame" x="74" y="307" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-lH-rbi">
+                                <rect key="frame" x="214" y="304" width="173" height="30"/>
                                 <animations/>
                                 <state key="normal" title="White demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,8 +50,8 @@
                                     <action selector="didPressedDemo3:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ay7-eC-4Ii"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFl-ms-ta8">
-                                <rect key="frame" x="74" y="345" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFl-ms-ta8">
+                                <rect key="frame" x="214" y="342" width="173" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Blur demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +63,19 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wdw-lH-rbi" firstAttribute="top" secondItem="Cfb-Oq-cvj" secondAttribute="bottom" constant="8" symbolic="YES" id="3vN-1Y-7AF"/>
+                            <constraint firstItem="Cfb-Oq-cvj" firstAttribute="leading" secondItem="llg-hL-ibq" secondAttribute="leading" id="4uD-S5-cta"/>
+                            <constraint firstItem="Wdw-lH-rbi" firstAttribute="trailing" secondItem="Cfb-Oq-cvj" secondAttribute="trailing" id="FDU-VD-TEI"/>
+                            <constraint firstItem="zFl-ms-ta8" firstAttribute="top" secondItem="Wdw-lH-rbi" secondAttribute="bottom" constant="8" symbolic="YES" id="JZf-Jb-agU"/>
+                            <constraint firstItem="llg-hL-ibq" firstAttribute="top" secondItem="MaE-HV-8Zb" secondAttribute="bottom" constant="164" id="OY3-GR-tc2"/>
+                            <constraint firstItem="llg-hL-ibq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="PP7-jz-yHR"/>
+                            <constraint firstItem="Cfb-Oq-cvj" firstAttribute="top" secondItem="llg-hL-ibq" secondAttribute="bottom" constant="8" symbolic="YES" id="Tla-mp-BaK"/>
+                            <constraint firstItem="Cfb-Oq-cvj" firstAttribute="trailing" secondItem="llg-hL-ibq" secondAttribute="trailing" id="U2i-kI-8hx"/>
+                            <constraint firstItem="zFl-ms-ta8" firstAttribute="leading" secondItem="Wdw-lH-rbi" secondAttribute="leading" id="YNI-Sf-E3f"/>
+                            <constraint firstItem="Wdw-lH-rbi" firstAttribute="trailing" secondItem="zFl-ms-ta8" secondAttribute="trailing" id="eon-0x-Gek"/>
+                            <constraint firstItem="Cfb-Oq-cvj" firstAttribute="leading" secondItem="Wdw-lH-rbi" secondAttribute="leading" id="uAt-7T-bx3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transparent View" id="KCa-Iv-kvg">
                         <barButtonItem key="rightBarButtonItem" title="Menu" id="guA-IS-VEZ">
@@ -72,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="156"/>
+            <point key="canvasLocation" x="1576.875" y="164.78873239436618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sl6-aI-xzN">
@@ -93,12 +109,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDH-zr-JAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="156"/>
+            <point key="canvasLocation" x="646.875" y="164.78873239436618"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
